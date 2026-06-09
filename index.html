@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIMO - Machines Lourdes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap)" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="#">FIMO</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#machines">Nos Machines</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Votre Partenaire de Confiance en Machines Lourdes</h2>
+            <p>Expertise et performance pour tous vos projets industriels et de construction.</p>
+            <a href="#contact" class="btn">Demander un Devis</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h3>À Propos de FIMO</h3>
+            <p>FIMO est une entreprise leader dans la fourniture et la maintenance de machines lourdes. Forts de plusieurs décennies d'expérience, nous nous engageons à offrir des solutions robustes et efficaces, adaptées aux exigences les plus strictes de nos clients.</p>
+            <p>Notre équipe d'experts est dédiée à l'excellence et à l'innovation, assurant la fiabilité et la performance de chaque équipement que nous proposons.</p>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light section-padding">
+        <div class="container">
+            <h3>Nos Services</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>Location de Machines</h4>
+                    <p>Une large gamme de machines lourdes disponibles à la location pour vos projets à court ou long terme.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Vente d'Équipements</h4>
+                    <p>Acquérir des machines neuves ou d'occasion, rigoureusement inspectées et garanties.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Maintenance et Réparation</h4>
+                    <p>Des techniciens qualifiés pour l'entretien préventif et les réparations rapides sur site.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Conseil et Expertise</h4>
+                    <p>Accompagnement personnalisé pour le choix de la machine la plus adaptée à vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="machines" class="section-padding">
+        <div class="container">
+            <h3>Nos Machines</h3>
+            <p>Découvrez notre vaste catalogue de machines lourdes robustes et performantes.</p>
+            <div class="machine-gallery">
+                <div class="machine-item">
+                    <img src="[via.placeholder.com](https://via.placeholder.com/300x200?text=Excavatrice)" alt="Excavatrice">
+                    <h4>Excavatrices</h4>
+                    <p>Pour vos travaux de terrassement et de démolition.</p>
+                </div>
+                <div class="machine-item">
+                    <img src="[via.placeholder.com](https://via.placeholder.com/300x200?text=Chargeuse)" alt="Chargeuse sur Roues">
+                    <h4>Chargeuses sur Roues</h4>
+                    <p>Idéales pour le déplacement de matériaux en vrac.</p>
+                </div>
+                <div class="machine-item">
+                    <img src="[via.placeholder.com](https://via.placeholder.com/300x200?text=Bouteur)" alt="Bouteur">
+                    <h4>Bouteurs</h4>
+                    <p>Parfaits pour le nivellement et le déplacement de grandes quantités de terre.</p>
+                </div>
+                <div class="machine-item">
+                    <img src="[via.placeholder.com](https://via.placeholder.com/300x200?text=Grue)" alt="Grue Mobile">
+                    <h4>Grues Mobiles</h4>
+                    <p>Solutions de levage pour tous vos chantiers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark section-padding">
+        <div class="container">
+            <h3>Contactez-nous</h3>
+            <p>Intéressé par nos services ? N'hésitez pas à nous contacter pour un devis ou toute question.</p>
+            <form action="#" method="POST" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le Message</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 FIMO. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
