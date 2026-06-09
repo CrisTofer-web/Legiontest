@@ -1,0 +1,356 @@
+/* Base */
+:root {
+    --primary-color: #e44d26; /* Orange ou couleur dominante si vous préférez */
+    --secondary-color: #333;
+    --text-color: #555;
+    --light-bg: #f8f8f8;
+    --dark-bg: #222;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.8em; }
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background: #c73c1d; /* Une teinte plus foncée du primary-color */
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Header */
+header {
+    background: var(--dark-bg);
+    color: var(--white);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: url('[via.placeholder.com](https://via.placeholder.com/1920x600?text=Machines+Lourde+FIMO)') no-repeat center center/cover; /* Remplacer par une image réelle */
+    color: var(--white);
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay sombre pour améliorer la lisibilité */
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sections communes */
+#about, #machines {
+    background: var(--white);
+    text-align: center;
+}
+
+.bg-light {
+    background: var(--light-bg);
+}
+
+.bg-dark {
+    background: var(--dark-bg);
+    color: var(--white);
+}
+
+.bg-dark h3, .bg-dark p, .bg-dark label {
+    color: var(--white);
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* Machines Gallery */
+.machine-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.machine-item {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+}
+
+.machine-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.machine-item h4 {
+    margin: 15px 0 10px;
+    color: var(--secondary-color);
+}
+
+.machine-item p {
+    padding: 0 15px 20px;
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+
+/* Contact Form */
+#contact .container {
+    max-width: 700px; /* Le formulaire prend moins de largeur */
+    text-align: center;
+}
+
+#contactForm {
+    margin-top: 40px;
+    background: var(--dark-bg); /* S'assure que le fond du formulaire est sombre */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--white); /* Label blanc sur fond sombre */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555; /* Bordure plus foncée */
+    border-radius: 5px;
+    background: #3a3a3a; /* Fond du champ plus sombre */
+    color: var(--white); /* Texte des champs blanc */
+    font-size: 1em;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #bbb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: none; /* Caché par défaut */
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Permet aux éléments de la nav de passer à la ligne */
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px 10px; /* Espacement ajusté pour mobile */
+    }
+
+    #hero {
+        padding: 100px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    .services-grid, .machine-gallery {
+        grid-template-columns: 1fr; /* Une colonne sur petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.5em; }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
